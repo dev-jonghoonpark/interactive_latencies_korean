@@ -374,7 +374,7 @@
                                `SSD에서 ${addCommas(getPayloadBytes())}Byte 순차적으로 읽기: `, "mbSSD");
         var seek = new Metric(getSeek(), "ms", "디스크 탐색: ", "seek");
         var mbDisk = new Metric(getDiskTransmissionDelay(getPayloadBytes()), "ms",
-                                `디스크에서 ${addCommas(getPayloadBytes())}Byte 순차적으로 일기: `, "mbDisk");
+                                `디스크에서 ${addCommas(getPayloadBytes())}Byte 순차적으로 읽기: `, "mbDisk");
         var wan = new Metric(getWanRTT(), "ms", "CA에서 네덜란드까지의 패킷 왕복 지연시간: ", "wan");
         var metrics = new Array(ns,L1,branch,L2,mutex,ns100,mem,micro,snappy,tenMicro,network,
                                ssdRandom,mbMem,rtt,ms,mbSSD,seek,mbDisk,wan);
